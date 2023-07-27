@@ -6040,7 +6040,9 @@ a.close.disabled {
   display: none;
   left: 25%;
   right: 25%;
-  float: left;
+  top: 5%;
+  /* bottom: 25%; */
+  float: center;
   width: 100%;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
