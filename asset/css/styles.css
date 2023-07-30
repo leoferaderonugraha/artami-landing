@@ -638,10 +638,10 @@ footer #wave {
   .btn-services:active{
       background-color: red;
   }
-  #pilih-nominal input[type="radio"]{
+  #section-2-pilih-nominal input[type="radio"]{
       visibility: hidden;
   }
-  #pilih-nominal input[type="radio"]:checked +label {
+  #section-2-pilih-nominal input[type="radio"]:checked +label {
       background-color: rgb(93, 109, 255,0.8);
       color: white !important;
   }
