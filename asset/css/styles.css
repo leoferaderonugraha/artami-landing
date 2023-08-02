@@ -610,3 +610,64 @@ footer #wave {
     margin-top: -5px;
   }
 }
+.custom-loader {
+  width:335px;
+  height:22px;
+  border-radius: 20px;
+  color:#F4CA12;
+  border:2px solid;
+  position: relative;
+  }
+  .custom-loader::before {
+  content:"";
+  position: absolute;
+  margin:2px;
+  inset:0 100% 0 0;
+  border-radius: inherit;
+  background:#F4CA12;
+  animation:p6 4s infinite;
+  }
+  @keyframes p6 {
+      100% {inset:0}
+  }
+  .btn-services {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+  }
+  .btn-services:active{
+      background-color: red;
+  }
+  #section-2-pilih-nominal input[type="radio"]{
+      visibility: hidden;
+  }
+  #section-2-pilih-nominal input[type="radio"]:checked +label {
+      background-color: rgb(93, 109, 255,0.8);
+      color: white !important;
+  }
+  .multi-collapse input[type="radio"]{
+      visibility: hidden;
+  }
+  .multi-collapse input[type="radio"]:checked +label {
+      background-color: rgb(93, 109, 255,0.8);
+      color: white !important;
+  }
+  .btn-check{
+      border: 0.2px solid rgb(207, 207, 207);
+  }
+  
+  .h24px {
+    color: #1B2125 !important;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .text12px {
+    color: #999999 !important;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
