@@ -611,63 +611,159 @@ footer #wave {
   }
 }
 .custom-loader {
-  width:335px;
-  height:22px;
+  width: 335px;
+  height: 22px;
   border-radius: 20px;
-  color:#F4CA12;
-  border:2px solid;
+  color: #f4ca12;
+  border: 2px solid;
   position: relative;
-  }
-  .custom-loader::before {
-  content:"";
+}
+.custom-loader::before {
+  content: "";
   position: absolute;
-  margin:2px;
-  inset:0 100% 0 0;
+  margin: 2px;
+  inset: 0 100% 0 0;
   border-radius: inherit;
-  background:#F4CA12;
-  animation:p6 4s infinite;
+  background: #f4ca12;
+  animation: p6 4s infinite;
+}
+@keyframes p6 {
+  100% {
+    inset: 0;
   }
-  @keyframes p6 {
-      100% {inset:0}
-  }
-  .btn-services {
-      position: absolute;
-      clip: rect(0,0,0,0);
-      pointer-events: none;
-  }
-  .btn-services:active{
-      background-color: red;
-  }
-  #section-2-pilih-nominal input[type="radio"]{
-      visibility: hidden;
-  }
-  #section-2-pilih-nominal input[type="radio"]:checked +label {
-      background-color: rgb(93, 109, 255,0.8);
-      color: white !important;
-  }
-  .multi-collapse input[type="radio"]{
-      visibility: hidden;
-  }
-  .multi-collapse input[type="radio"]:checked +label {
-      background-color: rgb(93, 109, 255,0.8);
-      color: white !important;
-  }
-  .btn-check{
-      border: 0.2px solid rgb(207, 207, 207);
-  }
-  
-  .h24px {
-    color: #1B2125 !important;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .text12px {
-    color: #999999 !important;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
-  }
+}
+.btn-services {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.btn-services:active {
+  background-color: red;
+}
+#section-2-pilih-nominal input[type="radio"] {
+  visibility: hidden;
+}
+#section-2-pilih-nominal input[type="radio"]:checked + label {
+  background-color: rgb(93, 109, 255, 0.8);
+  color: white !important;
+}
+.multi-collapse input[type="radio"] {
+  visibility: hidden;
+}
+.multi-collapse input[type="radio"]:checked + label {
+  background-color: rgb(93, 109, 255, 0.8);
+  color: white !important;
+}
+.btn-check {
+  border: 0.2px solid rgb(207, 207, 207);
+}
+
+.h24px {
+  color: #1b2125 !important;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text12px {
+  color: #999999 !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.ProgressBar {
+  margin: 0 auto;
+  padding: 2em 0 3em;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.ProgressBar-step {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.ProgressBar-step:before,
+.ProgressBar-step:after {
+  content: "";
+  height: 0.5em;
+  background-color: #9f9fa3;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: -50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s ease-out;
+}
+.ProgressBar-step:first-child:before,
+.ProgressBar-step:first-child:after {
+  display: none;
+}
+.ProgressBar-step:after {
+  background-color: #5264f9;
+  width: 0%;
+}
+.ProgressBar-step.is-complete + .ProgressBar-step.is-current:after,
+.ProgressBar-step.is-complete + .ProgressBar-step.is-complete:after {
+  width: 100%;
+}
+.ProgressBar-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #9f9fa3;
+  fill: #9f9fa3;
+  border-radius: 50%;
+  padding: 0.5em;
+  max-width: 100%;
+  z-index: 10;
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+.is-current .ProgressBar-icon {
+  fill: #5264f9;
+  background-color: #5264f9;
+}
+.is-complete .ProgressBar-icon {
+  fill: #dbf1ff;
+  background-color: #5264f9;
+}
+.ProgressBar-stepLabel {
+  display: block;
+  text-transform: capitalize;
+  color: #9f9fa3;
+  position: absolute;
+  padding-top: 0.5em;
+  width: 100%;
+  transition: all 0.25s ease-out;
+}
+.is-current > .ProgressBar-stepLabel,
+.is-complete > .ProgressBar-stepLabel {
+  color: #5264f9;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 4em auto;
+  font-size: 16px;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #5264f9;
+}
+
+.status-icon {
+  width: 40%;
+  height: auto;
+  align-self: center;
+}
+
+.payment-sub-title {
+  font-size: 18px;
+  color: #5264f9;
+  font-weight: 600;
+}
